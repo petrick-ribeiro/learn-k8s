@@ -24,7 +24,12 @@ spec:
           valueFrom:
             secretKeyRef:
               name: mongo-secret
-              key: mongo-pass
+              key: mongo-user
+        - name: USER_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: mongo-password 
         - name: DB_URL
           valueFrom:
             configMapKeyRef:
