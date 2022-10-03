@@ -1,0 +1,4 @@
+resources:
+  - go-cfg.yml
+  - go-svc.yml
+  - go-deploy.yml

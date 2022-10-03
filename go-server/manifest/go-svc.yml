@@ -1,0 +1,18 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-server
+spec:
+  selector:
+    app: go-server
+
+  type: NodePort
+  ports:
+  - name: go-server
+    protocol: TCP
+    port: 3000
+    targetPort: 3000
+    nodePort: 30000
+---
+
