@@ -43,11 +43,10 @@ metadata:
 spec:
   selector:
     app: mongo-express
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - protocol: TCP
-      port: 8081
+      port: 80
       targetPort: 8081
-      nodePort: 30000
 ---
 
